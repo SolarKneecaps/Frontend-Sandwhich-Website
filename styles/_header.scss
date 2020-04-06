@@ -1,0 +1,90 @@
+@import './variables';
+@import './mixins';
+
+.header{
+    font-family: $bodyFont;
+    font-size: 1.2rem;
+    background: $blackColor;
+    color: $whiteColor;
+    @include Flex(row);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    border-top: 25px solid $whiteColor;
+    z-index: 10;
+    &__options--container{
+        @include Flex-Center(row);
+        margin-left: 0.75em;
+        &__menu{
+            display: none;
+            &:hover,
+            &:focus{
+                cursor: pointer;
+                color: $darkgreyColor;
+            }
+        }
+        &__find{
+            &:hover,
+            &:focus{
+                cursor: pointer;
+                color: $darkgreyColor;
+            }
+        }
+    }
+    &__img{
+        width: 75px;
+        height: 75px;
+        box-shadow:
+            0 0 0 3px $yellowColor,
+            0 0 0 6px $blackColor;
+        background: $blackColor;
+        border-radius: 50%;
+        padding: 0.5em;
+    }
+    &__login--container{
+        @include Flex-Center(row);
+        margin-right: 0.75em;
+        &__text{
+            padding-left: 0.5em;
+            &:hover,
+            &:focus{
+                cursor: pointer;
+                color: $darkgreyColor;
+            }
+        }
+    }
+}
+
+
+@media(min-width: $media1){
+    .header{
+        height: 80px;
+        border-top: 30px solid $whiteColor;
+        justify-content: flex-start;
+        &__options--container{
+            order: 2;
+            &__menu{
+                display: inline-block;
+                padding: 0em 1.75em;
+                border-right: 3px solid $yellowColor;
+            }
+            &__find{
+                padding: 0em 1.75em;
+            }
+        }
+        &__img{
+            order: 1;
+            margin-left: 3em;
+            width: 85px;
+            height: 85px;
+        }
+        &__login--container{
+            order: 3;
+            margin-left: auto;
+            margin-right: 2em;
+        }
+    }
+}

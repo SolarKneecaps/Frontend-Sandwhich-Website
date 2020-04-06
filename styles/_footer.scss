@@ -1,0 +1,104 @@
+@import './variables';
+@import './mixins';
+
+
+.footer{
+    background: $greyColor;
+    color: $darkgreyColor;
+    font-family: $bodyFont;
+    font-size: 1.1rem;
+    padding-top: 1.75em;
+    @include Flex-Center(column);
+    &__infobtns--container{
+        @include Flex(row);
+        margin-bottom:1em;
+        &__containers{
+            text-align: center;
+            padding: 0 3.75em;
+            &__options{
+                padding: 0.5em 0em;
+                &:focus,
+                &:hover{
+                    cursor: pointer;
+                    color: $blackColor;
+                }
+            }
+        }
+    }
+    &__appdownload--text{
+            margin-bottom: 0.75em;
+            color: $blackColor;
+            text-align: center;
+    }
+    &__appdownload--container{
+        @include Flex(row);
+        &__btn--container{
+            @include Flex-Center(row);
+            align-items: flex-end;
+            background: $blackColor;
+            color: $whiteColor;
+            margin: 0em 1em 1.5em 1em;
+           //padding: 0.25em 0.5em 0.25em 0.5em;
+            padding: 0.25em 0em;
+            width: 160px;
+            border-radius: 0.25em;
+            box-shadow: 1px 1px 2px $blackColor,
+            -1px 1px 2px $blackColor,
+            1px -1px 2px $blackColor,
+            -1px -1px 2px $blackColor;
+            &:focus,
+            &:hover{
+                cursor: pointer;
+            }
+            &__img{
+              padding: 0em 0.25em;
+            }
+            &__text{
+                font-size: 1.2rem;
+            }
+        }
+    }
+    &__socialbtns--container{
+        margin-bottom: 1em;
+        i{
+            padding: 0em 0.25em;
+            &:focus,
+            &:hover{
+                color: $blackColor;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+@media (min-width: $media1){
+    .footer{
+        padding-top: 0.75em;
+        &__infobtns--container{
+            &__containers{
+                @include Flex-Center(row);
+                padding: 0;
+                &__options{
+                    padding: 0.5em 1em;
+                }
+            }
+        }
+        &__appdownload{
+            display: none;
+        }   
+    }   
+}
+
+@media(min-width: $media2){
+    .footer{
+        @include Flex-Center(row);
+        &__infobtns--container{
+            &__containers{
+                &__options{
+                    padding: 0.5em 0.5em;
+                }
+            }   
+        }
+    }
+}
