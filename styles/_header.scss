@@ -3,7 +3,7 @@
 
 .header{
     font-family: $bodyFont;
-    font-size: 1.2rem;
+    font-size: 1rem;
     background: $blackColor;
     color: $whiteColor;
     @include Flex(row);
@@ -11,7 +11,7 @@
     align-items: center;
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 100vw;
     height: 70px;
     border-top: 25px solid $whiteColor;
     z-index: 10;
@@ -46,7 +46,7 @@
     }
     &__login--container{
         @include Flex-Center(row);
-        margin-right: 0.75em;
+        margin-right: 1.35em;
         &__text{
             padding-left: 0.5em;
             &:hover,
@@ -55,6 +55,12 @@
                 color: $darkgreyColor;
             }
         }
+    }
+}
+
+@media(min-width: $largemobile){
+    .header{
+        font-size: 1.2rem;
     }
 }
 

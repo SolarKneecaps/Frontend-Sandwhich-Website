@@ -14,7 +14,7 @@
         margin-bottom:1em;
         &__containers{
             text-align: center;
-            padding: 0 3.75em;
+            padding: 0 3.5em;
             &__options{
                 padding: 0.5em 0em;
                 &:focus,
@@ -32,15 +32,17 @@
     }
     &__appdownload--container{
         @include Flex(row);
+        justify-content: space-evenly;
+        width: 100vw;
+        max-width: 35ch;
         &__btn--container{
             @include Flex-Center(row);
             align-items: flex-end;
             background: $blackColor;
             color: $whiteColor;
-            margin: 0em 1em 1.5em 1em;
-           //padding: 0.25em 0.5em 0.25em 0.5em;
-            padding: 0.25em 0em;
-            width: 160px;
+            margin-bottom: 1.5em;
+            padding: 0.75em 0em;
+            width: 130px;
             border-radius: 0.25em;
             box-shadow: 1px 1px 2px $blackColor,
             -1px 1px 2px $blackColor,
@@ -49,12 +51,13 @@
             &:focus,
             &:hover{
                 cursor: pointer;
+                color: $yellowColor;
             }
             &__img{
-              padding: 0em 0.25em;
+              padding-right: 0.25em;
             }
             &__text{
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
         }
     }

@@ -35,7 +35,7 @@
         margin-bottom: 1.25em;
         &__text{
             font-family: $boldFont;
-            font-size: 2.5rem;
+            font-size: 1.5rem;
             font-weight: 900;
             font-style: italic;
             color: $whiteColor;
@@ -121,7 +121,7 @@
             align-items: flex-start;
             &__text{
                 font-family: $boldFont;
-                font-size: 2.5rem;
+                font-size: 1.4rem;
                 color: $yellowColor;
                 margin-bottom: 0.35em;
             }
@@ -133,7 +133,7 @@
             &__text{
                 position: relative;
                 font-family: $boldFont;
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 max-width: 30ch;
                 margin: 0em auto;
                 margin-bottom: 1.65em;
@@ -148,10 +148,10 @@
                 clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
             }
             &::after{
-                left: -10px;
+                left: -5px;
             }
             &::before{
-                right: -10px;
+                right: -5px;
             }
             }
         }
@@ -220,6 +220,15 @@
             font-size: 1.8rem;
             margin-bottom: 0.25em;
         }
+    }
+}
+
+@media(min-width: $largemobile){
+    .main__order--container__text{
+        font-size: 1.75rem;
+    }
+    .main__rewards--container__title--container__text{
+        font-size: 1.75rem;
     }
 }
 
