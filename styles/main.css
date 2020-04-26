@@ -369,6 +369,7 @@ body {
 .main__order--container__text {
   font-family: "Titillium Web", sans-serif;
   font-size: 1.5rem;
+  font-size: clamp(1.5rem 4.5vw 3.5rem);
   font-weight: 900;
   font-style: italic;
   color: white;

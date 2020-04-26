@@ -35,7 +35,8 @@
         margin-bottom: 1.25em;
         &__text{
             font-family: $boldFont;
-            font-size: 1.5rem;
+           font-size: 1.5rem;
+           font-size: clamp(1.5rem 4.5vw 3.5rem);
             font-weight: 900;
             font-style: italic;
             color: $whiteColor;
@@ -225,7 +226,7 @@
 
 @media(min-width: $largemobile){
     .main__order--container__text{
-        font-size: 1.75rem;
+       font-size: 1.75rem;
     }
     .main__rewards--container__title--container__text{
         font-size: 1.75rem;
@@ -249,7 +250,7 @@
             align-items: center;
             &__text{
                 margin: 0 0.15em 0 0;
-                font-size: 2rem;
+               font-size: 2rem;
                 &::before{
                     display: none;
                 }
@@ -353,7 +354,7 @@
 
 @media(min-width: $media2){
     .main__order--container__text{
-        font-size: 2.45rem;
+       font-size: 2.45rem;
     }
 
     .main__rewards--container__title--container__text{
@@ -372,7 +373,7 @@
 
 @media(min-width: $media3){
     .main__order--container__text{
-        font-size: 3.5rem;
+       font-size: 3.5rem;
         
     }
     .main__order--container__btn{
